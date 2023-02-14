@@ -1,9 +1,19 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --border-margin: 2em;
+}
+
 *, *::before, *::after {
   margin: 0;
 }
 
 .App {
-  height: 200vh;
+  height: calc(200vh - var(--border-margin) * 2);
 }
 
 .disable-scroll {
