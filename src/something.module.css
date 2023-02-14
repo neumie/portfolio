@@ -1,0 +1,7 @@
+.something {
+  height: 100vh;
+
+  overflow-x: scroll;
+
+  background-color: purple;
+}
