@@ -1,5 +1,9 @@
 import styles from "./hero.module.css";
 
 export const Hero = () => {
-  return <div className={`${styles.hero}`}>Hero</div>;
+  return (
+    <>
+      <div className={`${styles.hero}`}>Hero</div>
+    </>
+  );
 };

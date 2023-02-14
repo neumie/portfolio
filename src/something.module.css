@@ -1,7 +1,60 @@
-.something {
-  height: 100vh;
+:root {
+  --border-margin: 8em;
+  --border-width: 5px;
+}
 
+.wrapper {
+  display: grid;
+  grid-template-columns: 100vw 70vw;
+
+  margin-top: -8em;
   overflow-x: scroll;
+  scroll-behavior: smooth;
+
+  height: 100vh;
+  width: 100vw;
+
+  scrollbar-width: none;
+}
+
+/* hide scroll on WebKit browsers */
+.wrapper::-webkit-scrollbar {
+  display:none;
+}
+
+.corner {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: calc(var(--border-margin) / 2);
+  margin-right: var(--border-margin);
+  margin-bottom: calc(var(--border-margin) / 2);
+  margin-left: var(--border-margin);
+
+  background-color: brown;
+}
+
+.something {
+  height: 100%;
+  border: var(--border-width) solid black;
+  border-top: none;
+  border-right: none;
 
   background-color: purple;
+}
+
+.projects {
+  margin: calc(var(--border-margin) / 2) var(--border-margin) calc(var(--border-margin) / 2) -8em;
+  border: var(--border-width) solid black;
+  border-left: none;
+  background-color: blue;
+}
+
+.connector {
+  margin-top: -4em;
+  height: calc(var(--border-margin) / 2 + var(--border-width));
+
+  border-left: var(--border-width) solid black;
+  border-right: var(--border-width) solid black;
+  background-color: pink;
 }

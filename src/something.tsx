@@ -6,8 +6,6 @@ type SomethingProps = {
 };
 
 export const Something = ({ bottom }: SomethingProps) => {
-  const [leftPos, setLeftPos] = useState<number>(0);
-
   const ref = useRef<HTMLInputElement>(null);
 
   const horizontalScroll = (event: any) => {
@@ -15,7 +13,7 @@ export const Something = ({ bottom }: SomethingProps) => {
       -1,
       Math.min(1, event.nativeEvent.wheelDelta || -event.nativeEvent.detail)
     );
-    event.currentTarget.scrollLeft -= delta * 10;
+    event.currentTarget.scrollLeft -= delta * 200;
   };
 
   const disableScroll = () => {
@@ -27,10 +25,8 @@ export const Something = ({ bottom }: SomethingProps) => {
   };
 
   const handleWheel = (event: any) => {
-    ref.current && setLeftPos(ref.current.scrollLeft);
-
     if (bottom) {
-      if (!leftPos) {
+      if (ref.current!.scrollLeft <= 0) {
         enableScroll();
         if (event.nativeEvent.wheelDelta <= 0) {
           horizontalScroll(event);
@@ -44,12 +40,15 @@ export const Something = ({ bottom }: SomethingProps) => {
 
   return (
     <div
-      className={`${styles.something}`}
+      className={`${styles.wrapper}`}
       ref={ref}
       onWheel={(e) => handleWheel(e)}
     >
-      Something
-      LongTextttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt
+      <div className={`${styles.corner}`}>
+        <div className={`${styles.connector}`}>connector</div>
+        <div className={`${styles.something}`}>something</div>
+      </div>
+      <div className={`${styles.projects}`}>projects</div>
     </div>
   );
 };
