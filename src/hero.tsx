@@ -1,9 +1,10 @@
+import React from "react";
 import styles from "./hero.module.css";
 
 export const Hero = () => {
   return (
-    <>
-      <div className={`${styles.hero}`}>Hero</div>
-    </>
+    <section id="hero" className={`${styles.hero}`}>
+      Hero
+    </section>
   );
 };

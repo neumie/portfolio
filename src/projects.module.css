@@ -1,0 +1,11 @@
+:root {
+  --border-margin: 8em;
+  --border-width: 5px;
+}
+
+.projects {
+  margin: calc(var(--border-margin) / 2) var(--border-margin) calc(var(--border-margin) / 2) -8em;
+  border: var(--border-width) solid black;
+  border-left: none;
+  background-color: blue;
+}

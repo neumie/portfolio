@@ -1,0 +1,54 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --border-margin: 8em;
+  --border-width: 5px;
+}
+
+*, *::before, *::after {
+  margin: 0;
+}
+
+.app {
+  height: calc(200vh - var(--border-margin) * 2);
+}
+
+.disableScroll {
+  height: 100%;
+  overflow: hidden;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 100vw 70vw;
+
+  margin-top: -8em;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+
+  height: 100vh;
+  width: 100vw;
+
+  scrollbar-width: none;
+}
+
+/* hide scroll on WebKit browsers */
+.wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.corner {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: calc(var(--border-margin) / 2);
+  margin-right: var(--border-margin);
+  margin-bottom: calc(var(--border-margin) / 2);
+  margin-left: var(--border-margin);
+
+  background-color: brown;
+}

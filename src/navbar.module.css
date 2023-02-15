@@ -1,0 +1,17 @@
+:root {
+  --border-margin: 8em;
+}
+
+.navbar {
+  position: sticky;
+  height: 0;
+  width: fit-content;
+  top: calc(50% - var(--border-margin) / 2);
+  left: calc(var(--border-margin) / 4);
+}
+
+.navlist {
+  list-style-type: none;  
+  height: 0;
+  direction: rtl;
+}
