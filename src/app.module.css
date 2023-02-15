@@ -24,7 +24,7 @@
 
 .wrapper {
   display: grid;
-  grid-template-columns: 100vw 70vw;
+  grid-template-columns: 100vw 70vw 0px;
 
   margin-top: -8em;
   overflow-x: scroll;
@@ -39,16 +39,4 @@
 /* hide scroll on WebKit browsers */
 .wrapper::-webkit-scrollbar {
   display: none;
-}
-
-.corner {
-  display: flex;
-  flex-direction: column;
-
-  margin-top: calc(var(--border-margin) / 2);
-  margin-right: var(--border-margin);
-  margin-bottom: calc(var(--border-margin) / 2);
-  margin-left: var(--border-margin);
-
-  background-color: brown;
 }

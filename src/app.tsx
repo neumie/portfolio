@@ -17,9 +17,24 @@ export const App = () => {
     setBottom(isBottom());
   }, [window.scrollY]);
 
+  const scrollToHero = () => {
+    horizontalRef.current && (horizontalRef.current.scrollLeft = 0);
+    setTimeout(() => {
+      scroll.scrollTo("hero", { duration: 500, smooth: true, offset: -100 });
+      enableScroll();
+    }, 500);
+  };
+
+  const scrollToAbout = () => {
+    setTimeout(() => {
+      horizontalRef.current && (horizontalRef.current.scrollLeft = 0);
+      scroll.scrollTo("about", { duration: 500, smooth: true });
+    }, 250);
+  };
+
   //Scrolls to projects
   const scrollToProjects = () => {
-    scroll.scrollTo("about", { duration: 500, smooth: true });
+    scroll.scrollTo("projects", { duration: 500, smooth: true });
     disableScroll();
     setTimeout(() => {
       horizontalRef.current && (horizontalRef.current.scrollLeft = 1000);
@@ -72,7 +87,11 @@ export const App = () => {
 
   return (
     <div className={`${styles.app}`} onWheel={handleWheel}>
-      <Navbar scrollToProjects={scrollToProjects} />
+      <Navbar
+        scrollToHero={scrollToHero}
+        scrollToAbout={scrollToAbout}
+        scrollToProjects={scrollToProjects}
+      />
       <Hero />
       <div
         className={`${styles.wrapper}`}
@@ -81,6 +100,12 @@ export const App = () => {
       >
         <About />
         <Projects />
+        <Navbar
+          scrollToHero={scrollToHero}
+          scrollToAbout={scrollToAbout}
+          scrollToProjects={scrollToProjects}
+          right={true}
+        />
       </div>
     </div>
   );

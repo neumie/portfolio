@@ -1,25 +1,24 @@
 import React from "react";
-import Scroll, { Link } from "react-scroll";
 import styles from "./navbar.module.css";
 
 type NavbarProps = {
+  scrollToHero: () => void;
+  scrollToAbout: () => void;
   scrollToProjects: () => void;
+  right?: boolean;
 };
 
-export const Navbar = ({ scrollToProjects }: NavbarProps) => {
+export const Navbar = ({
+  scrollToHero,
+  scrollToAbout,
+  scrollToProjects,
+  right,
+}: NavbarProps) => {
   return (
-    <nav className={`${styles.navbar}`}>
+    <nav className={`${styles.navbar} ${right && styles.right}`}>
       <ul className={`${styles.navlist}`}>
-        <li>
-          <Link to="hero" smooth={true} offset={-100}>
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link to="about" smooth={true}>
-            About
-          </Link>
-        </li>
+        <li onClick={scrollToHero}>Home</li>
+        <li onClick={scrollToAbout}>About</li>
         <li onClick={scrollToProjects}>Projects</li>
       </ul>
     </nav>

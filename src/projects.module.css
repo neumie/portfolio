@@ -4,8 +4,9 @@
 }
 
 .projects {
-  margin: calc(var(--border-margin) / 2) var(--border-margin) calc(var(--border-margin) / 2) -8em;
+  z-index: 1;
+  margin: calc(var(--border-margin) / 2) var(--border-margin) calc(var(--border-margin) / 2) calc(-1 * (var(--border-margin)));
   border: var(--border-width) solid black;
   border-left: none;
-  background-color: blue;
+  background-color: white;
 }
