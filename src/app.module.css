@@ -1,19 +1,35 @@
+:root {
+  --border-margin: 8em;
+  --border-width: 2px;
+
+  --lightest: #EEEEEE;
+  --light: #CCCCCC;
+  --middle: #999999;
+  --dark: #666666;
+  --darkest: #333333;
+
+  --background-color: var(--light);
+  --border-color: var(--darkest);
+}
+
 *,
 *::before,
 *::after {
+  font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
-}
-
-:root {
-  --border-margin: 8em;
-  --border-width: 5px;
-}
-
-*, *::before, *::after {
   margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background-color);
 }
 
 .app {
+  background-image: url("hand.png");
+  background-size: clamp(900px, 75%, 100px) auto;
+  background-repeat: no-repeat;
+  background-position: top;
   height: calc(200vh - var(--border-margin) * 2);
 }
 
@@ -26,7 +42,7 @@
   display: grid;
   grid-template-columns: 100vw 70vw 0px;
 
-  margin-top: -8em;
+  margin-top: calc(-1 * var(--border-margin));
   overflow-x: scroll;
   scroll-behavior: smooth;
 

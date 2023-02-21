@@ -4,8 +4,8 @@ import styles from "./about.module.css";
 export const About = () => {
   return (
     <section id="about" className={`${styles.corner}`}>
-      <div className={`${styles.connector}`}>connector</div>
-      <div className={`${styles.about}`}>About</div>
+      <div className={`${styles.connector}`}></div>
+      <div className={`${styles.about}`}></div>
     </section>
   );
 };

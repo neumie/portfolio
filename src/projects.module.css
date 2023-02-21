@@ -1,12 +1,16 @@
-:root {
-  --border-margin: 8em;
-  --border-width: 5px;
-}
-
 .projects {
+  height: calc(100vh - var(--border-margin)); 
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   z-index: 1;
+
   margin: calc(var(--border-margin) / 2) var(--border-margin) calc(var(--border-margin) / 2) calc(-1 * (var(--border-margin)));
-  border: var(--border-width) solid black;
+  padding: 2em;
+  gap: 2em;
+
+  border: var(--border-width) solid var(--border-color);
   border-left: none;
-  background-color: white;
+
+  background-color: var(--background-color);
 }

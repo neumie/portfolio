@@ -1,24 +1,30 @@
-:root {
-  --border-margin: 8em;
-}
-
 .navbar {
   position: sticky;
   height: 0;
-  width: fit-content;
-  margin-left: calc(var(--border-margin) / 2);
   top: calc(50% - var(--border-margin) / 2);
-  left: calc(var(--border-margin) / 4);
 }
 
 .navlist {
   list-style-type: none;  
-  height: 0;
+  text-align: center;
+}
+
+li:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.left {
+  width: fit-content;
   direction: rtl;
+  margin-left: calc(var(--border-margin) / 8);
 }
 
 .right {
   direction: ltr;
   margin-left: -8em;
-  right: 0;
+}
+
+a {
+  font-size: 1.5rem;
+  cursor: pointer;
 }

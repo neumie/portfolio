@@ -1,13 +1,26 @@
-:root {
-  --border-margin: 8em;
-}
-
 .hero {
+  display: flex;
+  flex-direction: column;
   height: calc(100vh - var(--border-margin));
 
   margin: var(--border-margin);
   margin-top: calc(var(--border-margin) / 2);
 
-  border: 5px solid black;
+  border: var(--border-width) solid var(--border-color);
   border-bottom: none;
+}
+
+.name, .title {
+  margin: 2em;
+
+  text-align: left;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+h2 {
+  font-size: 1.5rem;
 }
