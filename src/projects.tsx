@@ -1,14 +1,14 @@
 import React from "react";
-import { Project } from "./project";
+import { ProjectCard } from "./project_card";
 import styles from "./projects.module.css";
 
 export const Projects = () => {
   return (
     <section id="projects" className={`${styles.projects}`}>
-      <Project name={"Chord Trainer"} image={"chord-trainer.png"} />
-      <Project name={"Chord Trainer"} image={"chord-trainer.png"} />
-      <Project name={"Chord Trainer"} image={"chord-trainer.png"} />
-      <Project name={"Chord Trainer"} image={"chord-trainer.png"} />
+      <ProjectCard name={"Chord Trainer"} description="asd" />
+      <ProjectCard name={"Chord Trainer"} description="asd" />
+      <ProjectCard name={"Chord Trainer"} description="asd" />
+      <ProjectCard name={"Chord Trainer"} description="asd" />
     </section>
   );
 };

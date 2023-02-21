@@ -1,9 +1,0 @@
-.project {
-  overflow: hidden;
-
-  border: var(--border-width) solid var(--border-color);
-}
-
-img {
-  width: 100%;
-}
