@@ -1,7 +1,6 @@
 .project {
-  overflow: hidden;
-
-  border: var(--border-width) solid var(--border-color);
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .name {

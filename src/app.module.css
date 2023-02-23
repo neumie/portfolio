@@ -21,38 +21,27 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--background-color);
-}
 
-.app {
+
   background-image: url("hand.png");
-  background-size: clamp(900px, 75%, 100px) auto;
+  background-size: clamp(900px, 75%, 100px);
   background-repeat: no-repeat;
   background-position: top;
-  height: calc(200vh - var(--border-margin) * 2);
+  background-blend-mode: normal;
+  /* background-image: url("hand.png"), url("abstract.png");
+  background-size: clamp(900px, 75%, 100px), max 100%;
+  background-repeat: no-repeat, no-repeat;
+  background-position: top, bottom left;
+  background-blend-mode: normal, exclusion; */
 }
 
-.disableScroll {
-  height: 100%;
-  overflow: hidden;
-}
-
-.wrapper {
-  display: grid;
-  grid-template-columns: 100vw 70vw 0px;
-
-  margin-top: calc(-1 * var(--border-margin));
-  overflow-x: scroll;
-  scroll-behavior: smooth;
-
-  height: 100vh;
-  width: 100vw;
-
-  scrollbar-width: none;
-}
-
-/* hide scroll on WebKit browsers */
-.wrapper::-webkit-scrollbar {
-  display: none;
+.app-wrapper {
+  margin: calc(var(--border-margin) / 2) var(--border-margin);
+  border: var(--border-width) solid var(--border-color);
 }

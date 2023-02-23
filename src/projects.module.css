@@ -1,16 +1,5 @@
 .projects {
-  height: calc(100vh - var(--border-margin)); 
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  z-index: 1;
-
-  margin: calc(var(--border-margin) / 2) var(--border-margin) calc(var(--border-margin) / 2) calc(-1 * (var(--border-margin)));
-  padding: 2em;
-  gap: 2em;
-
-  border: var(--border-width) solid var(--border-color);
-  border-left: none;
-
-  background-color: var(--background-color);
+  display: flex;
+  height: calc(100vh - var(--border-margin) / 2);
+  overflow-x: scroll;
 }
