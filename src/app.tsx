@@ -1,5 +1,4 @@
 import React, { useRef, useState, useEffect, WheelEvent } from "react";
-import { Events, scroller } from "react-scroll";
 
 import styles from "./app.module.css";
 
@@ -9,14 +8,36 @@ import { About } from "./about";
 import { Projects } from "./projects";
 
 export const App = () => {
+  const [dark, setDark] = useState<boolean>(false);
+
+  const root = document.documentElement;
+  const toggleTheme = () => {
+    if (!dark) {
+      root.style.setProperty("--lightest", "#222222");
+      root.style.setProperty("--light", "#444444");
+      root.style.setProperty("--dark", "#CCCCCC");
+      root.style.setProperty("--darkest", "#DDDDDD");
+    } else {
+      root.style.setProperty("--darkest", "#222222");
+      root.style.setProperty("--dark", "#444444");
+      root.style.setProperty("--light", "#CCCCCC");
+      root.style.setProperty("--lightest", "#DDDDDD");
+    }
+    setDark((prev) => (prev = !prev));
+  };
+
   return (
-    <div id="top" className={styles["app"]}>
-      <Navbar />
-      <div className={styles["app-wrapper"]}>
-        <Hero />
-        <About />
-        <Projects />
+    <>
+      <div id="top"></div>
+      <div className={styles["app"]}>
+        <Navbar />
+        <div className={styles["app-wrapper"]}>
+          <Hero />
+          <About />
+          <Projects />
+        </div>
       </div>
-    </div>
+      <div id="bottom"></div>
+    </>
   );
 };
