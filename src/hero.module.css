@@ -3,7 +3,9 @@
   display: flex;
   flex-direction: column;
 
-  height: calc(100vh - var(--border-margin) / 2);
+  scroll-snap-align: end;
+
+  height: calc(100vh);
 }
 
 .name, .title {
@@ -18,15 +20,33 @@
   bottom: 2rem;  
 }
 
+h1, h2, p {
+  color: var(--darkest);
+  text-shadow: 2px 2px 4px var(--light), 2px 2px 4px var(--light), 2px 2px 4px var(--light);
+}
+
 h1 {
   font-size: 3rem;
   line-height: 3rem;
 }
 
-h2 {
+h2, p {
   font-size: 1.5rem;
 }
 
-p {
-  font-size: 1.5rem;
+@media only screen and (min-width: 768px) {
+/* tablet */
+
+  .hero {
+    height: calc(100vh - var(--border-margin) / 4);
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+
+  /* desktop */
+  .hero {
+    height: calc(100vh - var(--border-margin) / 2)
+  }
+
 }

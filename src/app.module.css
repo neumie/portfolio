@@ -2,13 +2,13 @@
   --border-margin: 8em;
   --border-width: 2px;
 
-  --lightest: #EEEEEE;
+  --lightest: #DDDDDD;
   --light: #CCCCCC;
   --middle: #999999;
-  --dark: #666666;
-  --darkest: #333333;
+  --dark: #444444;
+  --darkest: #222222;
 
-  --background-color: var(--light);
+  --background-color: var(--lightest);
   --border-color: var(--darkest);
 }
 
@@ -22,26 +22,49 @@
 }
 
 html {
+  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
 }
 
 body {
   background-color: var(--background-color);
 
-
-  background-image: url("hand.png");
-  background-size: clamp(900px, 75%, 100px);
-  background-repeat: no-repeat;
-  background-position: top;
-  background-blend-mode: normal;
-  /* background-image: url("hand.png"), url("abstract.png");
-  background-size: clamp(900px, 75%, 100px), max 100%;
+  background-image: url("hand.png"), url("another.jpg");
+  background-size: clamp(900px, 75%, 100px), 100% 100vh;
   background-repeat: no-repeat, no-repeat;
-  background-position: top, bottom left;
-  background-blend-mode: normal, exclusion; */
+  background-position: top, 50%;
 }
 
 .app-wrapper {
-  margin: calc(var(--border-margin) / 2) var(--border-margin);
-  border: var(--border-width) solid var(--border-color);
+  max-width: 1100px;
+}
+
+@media only screen and (min-width: 768px) { /* tablet */
+
+  .app-wrapper {
+    margin: calc(var(--border-margin) / 4) calc(var(--border-margin) / 2);
+    border: var(--border-width) solid var(--border-color);
+  }
+  
+}
+
+@media only screen and (min-width: 1000px) { /* desktop */
+
+  .app-wrapper {
+    margin: calc(var(--border-margin) / 2) var(--border-margin);
+    border: var(--border-width) solid var(--border-color);
+  }
+
+}
+
+@media only screen and (min-width: 1350px) { /* larger than normal */
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .app-wrapper {
+    width: 1100px;
+  }
 }

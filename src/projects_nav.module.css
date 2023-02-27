@@ -1,0 +1,9 @@
+.projects-nav {
+  display: flex;
+  position: sticky;
+  left: 50%;
+  margin: 2em 0;
+
+  justify-content: center;
+  gap: 2em;
+}

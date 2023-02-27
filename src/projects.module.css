@@ -1,5 +1,33 @@
+.projects-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
 .projects {
   display: flex;
-  height: calc(100vh - var(--border-margin) / 2);
   overflow-x: scroll;
+  flex-grow: 1;
+
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+@media only screen and (min-width: 768px) {
+
+  /* tablet */
+  .projects-wrapper {
+    height: calc(100vh - var(--border-margin) / 4)
+  }
+
+}
+
+@media only screen and (min-width: 1000px) {
+
+  /* desktop */
+  .projects-wrapper {
+    height: calc(100vh - var(--border-margin) / 2)
+  }
+
 }
