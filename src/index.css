@@ -1,0 +1,29 @@
+:root {
+  --border-margin: 8em;
+  --border-width: 2px;
+
+  --lightest: #DDDDDD;
+  --light: #CCCCCC;
+  --middle: #999999;
+  --dark: #444444;
+  --darkest: #222222;
+
+  --base: 1em;
+  --xsmall: calc(var(--base) * 1)
+  --small: calc(var(--base) * 1.25);
+  --medium: calc(var(--base) * 1.5);
+  --large: calc(var(--base) * 3);
+  --xlarge: calc(var(--base) * 4);
+
+  --background-color: var(--lightest);
+  --border-color: var(--darkest);
+}
+
+*,
+*::before,
+*::after {
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
