@@ -3,18 +3,16 @@
     "id": "1",
     "name": "Chord-Trainer",
     "description": "Every decent guitar player has to be able to switch chord positions in a mere blink of an eye. Chord Trainer aims to make the learning process of that easier.",
-    "tools": ["React", "CSS modules"],
-    "github": "https://github.com",
+    "tools": ["React", "Typescript", "Vite", "Vexchords", "TailwindCSS"],
+    "github": "https://github.com/neumie/chord-trainer",
     "demo": "linktodemo"
   },
   {
     "id": "2",
     "name": "Discord Bot",
-    "description": "A simple discord bot that can play music, etc etc etc"
-  },
-  {
-    "id": "3",
-    "name": "Test",
-    "description": "Description lmao"
+    "description": "A simple discord bot that can play music, etc etc etc",
+    "tools": ["Typescript", "Discord API"],
+    "github": "https://github.com/neumie/DiscordBot",
+    "demo": "linktodemo"
   }
 ]

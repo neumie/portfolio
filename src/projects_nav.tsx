@@ -5,7 +5,11 @@ import projectList from "./projects.json";
 export const ProjectsNav = () => {
   const projectLinks = projectList.map((project) => {
     return (
-      <a href={`#${project.id}`} key={project.id}>
+      <a
+        href={`#${project.id}`}
+        className={styles["project-link"]}
+        key={project.id}
+      >
         {project.name}
       </a>
     );

@@ -13,6 +13,9 @@ export const Projects = () => {
         id={project.id}
         name={project.name}
         description={project.description}
+        tools={project.tools}
+        github={project.github}
+        demo={project.demo}
       />
     );
   });

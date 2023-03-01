@@ -1,4 +1,7 @@
 .project {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 25% 60% 15%;
   min-width: 100%;
   min-height: 100%;
 
@@ -9,13 +12,45 @@
 .name {
   display: flex;
   justify-content: center;
+
+  font-size: var(--xlarge);
 }
 
-img {
-  width: 60%;
+.description-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2em;
 }
 
-h3 {
-  display: inline-block;
-  border-bottom: 2px solid black;
+.links {
+  display: flex;
+  justify-content: center;
+
+  gap: var(--medium);
+}
+
+.project h4 {
+  font-size: var(--medium);
+  line-height: var(--small);
+}
+
+.project li {
+  font-size: 1.15em;
+}
+
+.project li:not(:last-child) {
+  margin-bottom: 0.25em;
+}
+
+.project img {
+  width: var(--xlarge);
+}
+
+@media only screen and (min-width: 768px) {
+  /* tablet */
+
+  .description-wrapper {
+    gap: 4em;
+  }
+
 }
