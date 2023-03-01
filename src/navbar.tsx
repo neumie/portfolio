@@ -4,7 +4,7 @@ import styles from "./navbar.module.css";
 export const Navbar = () => {
   return (
     <nav className={styles["navbar"]}>
-      <ul className={styles["navlist-mobile"]}>
+      <ul className={`${styles["navlist-mobile"]}`}>
         <a href="#top">
           <img src="home.svg" alt="home icon" />
         </a>
@@ -15,7 +15,7 @@ export const Navbar = () => {
           <img src="list.svg" alt="projects icon" />
         </a>
       </ul>
-      <ul className={styles["navlist-desktop"]}>
+      <ul className={`${styles["navlist-desktop"]}`}>
         <a href="#top">Home</a>
         <a href="#about">About</a>
         <a href="#bottom">Projects</a>
