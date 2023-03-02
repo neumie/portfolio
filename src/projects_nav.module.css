@@ -64,8 +64,3 @@
   height: 0px;
   background: var(--lightest);
 }
-
-.project-link:hover {
-  background: var(--middle);
-  color: var(--lightest);
-}
