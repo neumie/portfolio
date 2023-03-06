@@ -5,7 +5,6 @@
     "skills"
     "contact";
   padding: 2em;
-  height: 100vh;
 }
 
 .contact {
@@ -30,12 +29,14 @@
   background-color: var(--light);
 
   padding: 2em;
+  margin-bottom: 2em;
   box-shadow: 0 0 10px var(--dark);
   text-align: center;
 }
 
 .skills {
   grid-area: skills;
+  margin-bottom: 2em;
 }
 
 .skills ul {
@@ -65,8 +66,6 @@
   /* tablet */
 
   .about {
-    grid-template-rows: 1fr 2fr;
-    grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "description description"
       "contact skills";
@@ -74,6 +73,7 @@
 
   .skills {
     padding: 2em 0 2em 2em;
+    margin-bottom: 0;
   }
 
   .contact {
