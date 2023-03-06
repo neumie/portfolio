@@ -28,7 +28,6 @@ export const App = () => {
 
   return (
     <>
-      <div id="top"></div>
       <div className={styles["app"]}>
         <Navbar />
         <div className={styles["app-wrapper"]}>
@@ -37,7 +36,6 @@ export const App = () => {
           <Projects />
         </div>
       </div>
-      <div id="bottom"></div>
     </>
   );
 };
