@@ -6,7 +6,7 @@ export const Hero = () => {
     <section id="hero" className={styles["hero"]}>
       <div className={styles["name"]}>
         <h1>Jakub Neumann</h1>
-        <h2>Front-End Developer</h2>
+        <h2>Software Developer</h2>
         <div className={styles["description"]}>
           <p>
             I am a developer based in the Czech Republic. Currently I'm
