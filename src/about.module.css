@@ -1,4 +1,57 @@
 .about {
+  display: grid;
+  grid-template-areas: 
+    "description"
+    "skills"
+    "contact";
+  padding: 2em;
   height: 100vh;
-  scroll-snap-align: start;
+}
+
+.contact {
+  grid-area: contact;
+}
+
+.description {
+  grid-area: description;
+  background-color: var(--light);
+
+  padding: 2em;
+  box-shadow: 0 0 10px var(--dark);
+  text-align: center;
+}
+
+.skills {
+  grid-area: skills;
+}
+
+.skills ul {
+  list-style-type: none;
+}
+
+.skills li {
+  display: inline-block;
+  margin: 0.5em;
+  padding: 0.5em;
+  background-color: var(--light);
+  box-shadow: 1px 1px 4px var(--dark);
+}
+
+@media only screen and (min-width: 768px) {
+  /* tablet */
+
+  .about {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "description description"
+      "contact skills";
+  }
+
+  .skills {
+    padding: 2em 0 2em 2em;
+  }
+
+  .contact {
+    padding: 2em 2em 2em 0;
+  }
 }
