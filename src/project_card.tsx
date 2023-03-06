@@ -35,12 +35,14 @@ export const ProjectCard = ({
         </div>
       </div>
       <div className={styles["links"]}>
-        <a href={github}>
+        <a href={github} target="_blank">
           <img src="/github.svg" />
         </a>
-        <a href={demo}>
-          <img src="/new_tab.svg" />
-        </a>
+        {demo && (
+          <a href={demo} target="_blank">
+            <img src="/new_tab.svg" />
+          </a>
+        )}
       </div>
     </div>
   );

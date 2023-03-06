@@ -12,7 +12,6 @@
     "name": "Discord Bot",
     "description": "A simple discord bot that can play music, etc etc etc",
     "tools": ["Typescript", "Discord API"],
-    "github": "https://github.com/neumie/DiscordBot",
-    "demo": "linktodemo"
+    "github": "https://github.com/neumie/DiscordBot"
   }
 ]
