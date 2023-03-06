@@ -1,19 +1,28 @@
 .navbar {
   position: absolute;
-  width: var(--border-margin);
+  width: auto;
 
-  top: calc(50% - var(--border-margin) / 2);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.navbar .navlist-desktop {
+  width: var(--border-margin);
 }
 
 .navlist-mobile, .navlist-desktop {
   list-style-type: none;
   flex-direction: column;
   text-align: center;
-  gap: 0.5em;
+  gap: 0.6em;
 }
 
 .navlist-mobile {
   display: flex;
+  padding: 0.5em;
+  background-color: var(--light);
+  box-shadow: 5px 0px 10px var(--middle);
 }
 
 .navlist-desktop {
@@ -25,11 +34,17 @@
 }
 
 .navbar img {
-  width: var(--large);
+  padding: 0.3em;
+  width: 2.5em;
+  transition: background-color 1s;
+}
+
+.navbar img:hover {
+  background-color: var(--lightest);
 }
 
 .navbar a {
-  display:block;
+  display: block;
   cursor: pointer;
 
   font-size: var(--medium);
@@ -40,7 +55,7 @@
   transition: color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
 }
 
-.navbar a:hover {
+.navbar .navlist-desktop a:hover {
   color: var(--lightest);
   box-shadow: inset calc(-1 * var(--border-margin)) 0 0 0 var(--darkest);
 }
@@ -58,7 +73,10 @@
 /* desktop */
 
   .navbar {
+    position: sticky;
+    height: 0;
     left: 0;
+    top: calc(50% - var(--border-margin) / 2);
   }
 
   .navlist-mobile {
@@ -67,11 +85,6 @@
 
   .navlist-desktop {
     display: flex;
-  }
-
-  .navbar {
-    position: sticky;
-    height: 0;
   }
 
 }
