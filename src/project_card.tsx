@@ -7,7 +7,7 @@ type ProjectProps = {
   id: string;
   tools: string[];
   github: string;
-  demo: string;
+  demo?: string;
 };
 
 export const ProjectCard = ({
