@@ -31,7 +31,7 @@
 
 .project h4 {
   font-size: var(--medium);
-  line-height: var(--small);
+  line-height: var(--medium);
 }
 
 .project li {

@@ -8,8 +8,8 @@
   --dark: #444444;
   --darkest: #222222;
 
-  --base: 1em;
-  --xsmall: calc(var(--base) * 1)
+  --base: 0.8em;
+  --xsmall: calc(var(--base) * 1);
   --small: calc(var(--base) * 1.25);
   --medium: calc(var(--base) * 1.5);
   --large: calc(var(--base) * 3);
@@ -26,4 +26,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  /* tablet */
+  :root {
+      --base: 1em;
+    }
 }
