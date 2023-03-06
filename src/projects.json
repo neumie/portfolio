@@ -10,8 +10,8 @@
   {
     "id": "2",
     "name": "Discord Bot",
-    "description": "A simple discord bot that can play music, etc etc etc",
-    "tools": ["Typescript", "Discord API"],
+    "description": "A basic music discord bot with a queue system.",
+    "tools": ["Typescript", "discord.js", "discord-player"],
     "github": "https://github.com/neumie/DiscordBot"
   }
 ]
