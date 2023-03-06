@@ -9,7 +9,20 @@
 }
 
 .contact {
+  display: flex;
+  flex-direction: column;
   grid-area: contact;
+
+  gap: var(--small);
+}
+
+.contacts {
+  display: flex;
+  gap: var(--small);
+}
+
+.contacts img {
+  width: var(--xlarge);
 }
 
 .description {
@@ -37,10 +50,22 @@
   box-shadow: 1px 1px 4px var(--dark);
 }
 
+.description h2 {
+  font-size: var(--large);
+  line-height: var(--small);
+  margin-bottom: 1em;
+}
+
+.description h3 {
+  font-size: var(--medium);
+  line-height: var(--small);
+}
+
 @media only screen and (min-width: 768px) {
   /* tablet */
 
   .about {
+    grid-template-rows: 1fr 2fr;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "description description"
