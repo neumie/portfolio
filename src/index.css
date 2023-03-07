@@ -28,9 +28,27 @@
   padding: 0;
 }
 
+.animated-entrance {
+  animation-duration: 0.5s;
+  animation-name: animate-entrance;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
 @media only screen and (min-width: 768px) {
   /* tablet */
   :root {
       --base: 1em;
     }
+}
+
+@keyframes animate-entrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
 }
