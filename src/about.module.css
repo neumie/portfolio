@@ -20,7 +20,6 @@
 
 .skills {
   grid-area: skills;
-  margin-bottom: 2em;
 }
 
 .skills ul {
@@ -56,11 +55,7 @@
   }
 
   .skills {
-    padding: 2em 0 2em 2em;
+    padding: 2em 0 0 2em;
     margin-bottom: 0;
-  }
-
-  .contact {
-    padding: 2em 2em 2em 0;
   }
 }
