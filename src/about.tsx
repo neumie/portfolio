@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./about.module.css";
 
 export const About = () => {
   return (
-    <section id="about" className={`${styles.about}`}>
+    <section id="about" className={`${styles["about"]}`}>
       <div className={styles["description"]}>
         <h2>Hi, I'm Jakub. Nice to meet You.</h2>
         <h3>
@@ -13,20 +13,6 @@ export const About = () => {
           I've always found passion in problem solving and creating intuitive
           solutions.
         </h3>
-      </div>
-      <div className={styles["contact"]}>
-        <h3>Contact me</h3>
-        <div className={styles["contacts"]}>
-          <a href="https://www.linkedin.com/in/jakub-neumann0/" target="_blank">
-            <img src="/linkedin.svg" />
-          </a>
-          <a href="https://github.com/neumie" target="_blank">
-            <img src="/github.svg" />
-          </a>
-          <a href="mailto:jakub_neumann@outlook.com" target="_blank">
-            <img src="/mail.svg" />
-          </a>
-        </div>
       </div>
       <div className={styles["skills"]}>
         <h3>My skills:</h3>

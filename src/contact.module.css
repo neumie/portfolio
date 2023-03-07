@@ -1,0 +1,25 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  padding-top: 15vh;
+  margin-bottom: 15vh;
+}
+
+.contacts {
+  display: flex;
+  gap: var(--small);
+}
+
+.contacts img {
+  width: var(--xlarge);
+}
+
+.contacts img:hover {
+  opacity: 65%;
+}
+
+.contact h2 {
+  font-size: var(--large);
+}

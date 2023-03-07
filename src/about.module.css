@@ -5,23 +5,7 @@
     "skills"
     "contact";
   padding: 2em;
-}
-
-.contact {
-  display: flex;
-  flex-direction: column;
-  grid-area: contact;
-
-  gap: var(--small);
-}
-
-.contacts {
-  display: flex;
-  gap: var(--small);
-}
-
-.contacts img {
-  width: var(--xlarge);
+  padding-top: 15vh;
 }
 
 .description {
