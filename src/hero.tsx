@@ -3,7 +3,7 @@ import styles from "./hero.module.css";
 
 export const Hero = () => {
   return (
-    <section id="hero" className={styles["hero"]}>
+    <section id="hero" className={`${styles["hero"]} animated-entrance`}>
       <div className={styles["name"]}>
         <h1>Jakub Neumann</h1>
         <h2>Software Developer</h2>
