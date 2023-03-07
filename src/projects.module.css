@@ -7,7 +7,7 @@
 
 .projects {
   display: flex;
-  overflow-x: scroll;
+  overflow-x: hidden;
   flex-grow: 1;
 
   scroll-behavior: smooth;
