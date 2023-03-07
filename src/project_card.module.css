@@ -29,6 +29,14 @@
   gap: var(--medium);
 }
 
+.links img {
+  transition: opacity 0.5s;
+}
+
+.links img:hover {
+  opacity: 65%;
+}
+
 .project h4 {
   font-size: var(--medium);
   line-height: var(--medium);
