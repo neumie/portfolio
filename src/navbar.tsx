@@ -11,6 +11,9 @@ export const Navbar = () => {
         <a href="#about">
           <img src="info.svg" alt="about icon" />
         </a>
+        <a href="#contact">
+          <img src="contact.svg" alt="contact icon" />
+        </a>
         <a href="#projects">
           <img src="list.svg" alt="projects icon" />
         </a>
@@ -18,6 +21,7 @@ export const Navbar = () => {
       <ul className={`${styles["navlist-desktop"]}`}>
         <a href="#top">Home</a>
         <a href="#about">About</a>
+        <a href="#contact">Contact</a>
         <a href="#bottom">Projects</a>
       </ul>
     </nav>

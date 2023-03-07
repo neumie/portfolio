@@ -14,6 +14,7 @@
 
 .contacts img {
   width: var(--xlarge);
+  transition: opacity 0.5s;
 }
 
 .contacts img:hover {
