@@ -1,4 +1,12 @@
 [
+  { 
+    "id": "3",
+    "name": "Calendar",
+    "description": "A calendar with events made in 7 days",
+    "tools": ["Typescript", "React", "Material UI"],
+    "github": "https://github.com/neumie/nfctron-calendar",
+    "demo": "https://neumie-calendar.netlify.app"
+  },
   {
     "id": "1",
     "name": "Chord-Trainer",
