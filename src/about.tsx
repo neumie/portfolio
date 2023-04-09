@@ -26,6 +26,7 @@ export const About = () => {
           <li className={styles["skill"]}>Github</li>
           <li className={styles["skill"]}>Linux</li>
           <li className={styles["skill"]}>TailwindCSS</li>
+          <li className={styles["skill"]}>Material UI</li>
         </ul>
       </div>
     </section>
